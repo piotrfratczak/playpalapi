@@ -1,5 +1,4 @@
 models:
-
   Event:
     belongsTo: [User]
     fake:
@@ -9,7 +8,6 @@ models:
       description: { loremWords: [2, 10] }
       eventDate: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
       dateCreated: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
-    
    User:
     hasMany: [Event]
     fake:
