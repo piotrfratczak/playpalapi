@@ -1,17 +1,18 @@
 models:
-  Event:
-    belongsTo: [User]
-    fake:
-      _count: 10
-      id: { int: [0, 100] }
-      title: { loremWords: [1, 3] }
-      description: { loremWords: [2, 10] }
-      eventDate: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
-      dateCreated: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
-   User:
-    hasMany: [Event]
-    fake:
-      _count: 10
-      id: { int: [0,100] }
-      name: { loremWords: [1,2] }
-      bio: { loremWords: [2, 10] }
+ Event:
+  belongsTo: [User]
+  fake:
+   _count: 10
+   id: { int: [0, 100] }
+   title: { loremWords: [1, 3] }
+   description: { loremWords: [2, 10] }
+   eventDate: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
+   dateCreated: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
+
+ User:
+  hasMany: [Event]
+  fake:
+   _count: 10
+   id: { int: [0,100] }
+   name: { loremWords: [1,2] }
+   bio: { loremWords: [2, 10] }
