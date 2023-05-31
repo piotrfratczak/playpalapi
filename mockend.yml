@@ -1,6 +1,7 @@
 models:
  Event:
   belongsTo: [User]
+  hasMany: [Location]
   fake:
    _count: 10
    id: { int: [0, 100] }
@@ -13,6 +14,16 @@ models:
   hasMany: [Event]
   fake:
    _count: 10
-   id: { int: [0,100] }
+   id: { int: [0, 100] }
    name: { loremWords: [5, 25] }
    bio: { loremWords: [20, 100] }
+   
+ Location:
+  belongsTo: [Event]
+  fake:
+   _count: 10
+   id: { int: [1, 100] }
+   lat: { int: [1, 100] }
+   lon: { int: [1, 100] }
+   name: { loremWords: [5, 25] }
+   description: { loremWords: [20, 100] }
